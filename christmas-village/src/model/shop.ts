@@ -18,4 +18,5 @@ export type Shop = {
         width: number;
         height: number;
     };
+    image?: string; // Optional shop image path
 };

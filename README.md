@@ -1,5 +1,26 @@
 # christmas-village
 
+## Quick Start
+
+### Running the Frontend
+```bash
+cd christmas-village
+npm install
+npm run dev
+```
+
+### Running the Backend
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+The frontend runs on `http://localhost:5173` (Vite default)
+The backend runs on `http://localhost:3001`
+
+The frontend is configured to proxy `/api` requests to the backend automatically.
+
 ## UX flow
 
 - Start in Village map with a movable avatar.

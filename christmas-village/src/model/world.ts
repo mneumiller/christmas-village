@@ -1,4 +1,5 @@
 import type { ShopId } from "./shop";
+import type { ShoppingBag } from "./shoppingBag";
 
 export type MapId = "village"
 
@@ -16,4 +17,5 @@ export type WorldState = {
     player: Player;
     mode: "world" | "shop";
     enteredShopId?: ShopId;
+    shoppingBag: ShoppingBag;
 };
