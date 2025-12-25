@@ -9,6 +9,14 @@ export const gifts: Gift[] = [
         tags: ["nfl", "clothing", "homegoods", "football"]
     },
     {
+        id: "bears-hoodie",
+        title: "Bears Hoodie",
+        shopId: "nflshop",
+        url: "https://www.nflshop.com/",
+        tags: ["nfl", "clothing", "bears", "football"],
+        priceUsd: 65.00,
+    },
+    {
         id: "bird-themed-gift",
         title: "Bird Watching Kit",
         shopId: "uncommongoods",

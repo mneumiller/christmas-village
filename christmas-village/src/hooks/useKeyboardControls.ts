@@ -26,7 +26,7 @@ export function useKeyboardControls({
       }
 
       const baseSpeed = 5;
-      const speed = e.metaKey ? baseSpeed * 5 : baseSpeed; // Command key increases speed 3x
+      const speed = (e.metaKey || e.shiftKey) ? baseSpeed * 5 : baseSpeed; // Command or Shift key increases speed 5x
       let newPosition: Vec2 | null = null;
 
       if (e.key === "ArrowUp" || e.key === "w" || e.key === "W") {

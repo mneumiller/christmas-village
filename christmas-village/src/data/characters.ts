@@ -9,17 +9,18 @@ export const characters: Character[] = [
     position: { x: 500, y: 300 },
     preferences: {
       likedTags: ["unique", "handmade", "artisan"],
+      dislikedTags: ["bears"],
     },
     quest: {
       id: "quest-phil-1",
       characterId: "phil",
       title: "Something Unique",
-      description: "I'm looking for something truly unique and special. Nothing ordinary!",
-      requiredTags: ["unique", "handmade", "nfl"],
+      description: "I don't need gifts! But if you want to get me something, I love the Packers but never buy NFL gear.",
+      requiredTags: ["experiences", "nfl", "food"],
       status: "active",
     },
     image: philImage,
-    size: 100, // Make Phil bigger
+    size: 100,
   },
   {
     id: "melissa",

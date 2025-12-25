@@ -32,15 +32,17 @@ export function evaluateGift(gift: Gift, character: Character): GiftEvaluation {
   // Check price (if character has a max price preference)
   const priceOk = !preferences.maxPrice || !gift.priceUsd || gift.priceUsd <= preferences.maxPrice;
 
-  // Determine rating
+  // Determine rating - DISLIKES TRUMP EVERYTHING
   let rating: GiftEvaluation["rating"];
   let message: string;
 
   if (hasDislikedTag) {
+    // Dislikes override everything - even if it matches quest or has liked tags
     rating = "poor";
-    message = `Hmm, I'm not really into ${preferences.dislikedTags?.find(tag => 
+    const dislikedTag = preferences.dislikedTags?.find(tag => 
       gift.tags.some(gt => gt.toLowerCase() === tag.toLowerCase())
-    )} items. Thanks, but this isn't quite right for me.`;
+    );
+    message = `Oh no... I really don't like ${dislikedTag} items. I appreciate the thought, but this isn't for me at all.`;
   } else if (matchesQuest && likedTagMatches >= 2) {
     rating = "excellent";
     message = "Wow! This is perfect! Exactly what I was looking for. Thank you so much!";
